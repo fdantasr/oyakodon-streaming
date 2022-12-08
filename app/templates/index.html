@@ -1,0 +1,52 @@
+{% extends 'base.html' %} {% block title %}Oyakodon - Home{% endblock %}
+{% block container%}
+
+<header>
+  <img class="logo" src="../static/images/Oyakodon.svg" width="140px" height="140px" alt="">
+  <nav>
+    <ul class="nav__links">
+      <li><a href="#" >Home</a></li>
+      <li><a href="#" >Gêneros</a></li>
+      <li><a href="#" >Suporte</a></li>
+    </ul>
+  </nav>
+  <form class="relative mr-4 ml-4 w-80" id="form">
+    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+
+    </div>
+    <!--Botão Search dentro da caixa de pesquisa-->
+    <input type="text" id="search"
+      class=" w-72 h-9 p-4 pl-10 text-sm text-gray-900 border rounded-lg focus:border-blue-500 bg-gray-700 border-transparent focus:text-white focus:ring-blue-500 focus:border-blue-500 font-semibold"
+      placeholder="Buscar" />
+
+  </form>
+  <img class="profile" src="../static/images/a.jpeg" alt="">
+</header>
+
+<div class="container-initial">
+  <div class="apresentation">
+    <h1>Explorar</h1>
+    <p>O que você quer assistir hoje?</p>
+    <div class="card-initial">
+
+      <div class="text-card">
+        <h2>Demon Slayer</h2>
+        <p>
+          Japão, era Taisho. Tanjiro, um bondoso jovem que ganha a vida <br> vendendo carvão, descobre que sua família foi massacrada por um <br> demônio. E pra piorar, Nezuko...
+        </p>
+      </div>
+    </div>
+    <h1 class="title">Lançamentos</h1>
+  </div>
+
+</div>
+<!--Section Lançamentos-->
+<section>
+ 
+  
+</section>
+<ul id="lista" class="flex gap-4 flex-wrap justify-center my-10"></ul>
+
+<script src="{{url_for('static', filename='main.js')}}"></script>
+
+{% endblock %}

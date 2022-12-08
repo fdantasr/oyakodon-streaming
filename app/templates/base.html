@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %} {% endblock %}</title>
+  <link ... href="{{ url_for('static', filename='styles/main.css') }}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+
+  </style>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600&display=swap');
+
+  * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
+body{
+  background-color:#192026;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: #192026;
+  position: sticky;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.nav__links a,
+.search,
+.overlay__content a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #edf0f1;
+  text-decoration: none;
+  padding-left: 1px;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  padding-right: 85px;
+  font-weight: bold;
+}
+
+.nav__links li {
+  padding: 0px 10px;
+
+}
+
+.nav__links li a {
+  transition: color 0.3s ease 0s;
+  line-height: 32px;
+  color: #868686;
+  font-size: 13px;
+}
+
+.nav__links li a:hover {
+  color: #408CFF;
+}
+
+.bg-gray-800{
+  background-color: #374151;
+}
+
+#search{
+  margin-left: 95px;
+  padding-left: 15px;
+}
+
+.profile{
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+}
+
+
+.container-initial{
+margin-left: 12.3%;
+margin-top: 0.7%;
+}
+
+.apresentation h1{
+color: #FFFFFF;
+font-size: 21px;
+font-weight:500;
+}
+.apresentation p{
+  color: #868686;
+  font-size: 16px;
+  margin-top: 0.3rem;
+  line-height: 100%;
+}
+.card-initial {
+  background-color: #FFFFFF;
+  width: 1014px;
+  height: 350px ;
+  border-radius: 12px;
+  margin-top: 2%;
+  background:-webkit-linear-gradient(rgba(0, 0, 0, 0.137), rgba(0, 0, 0, 0.781)),url('../static/images/background.png');
+  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.377);
+}
+.text-card{
+  margin-left: 45px;
+  padding-top: 179px;
+}
+.text-card h2{
+color: #FFFFFF;
+font-size: 25px;
+font-weight:500;
+
+}
+.text-card p{
+  color: #FFFFFF;
+  font-size: 13px;
+  margin-top: 1.2rem;
+  line-height: 150%;
+  font-weight: 100px;
+}
+.title{
+  margin-top: 30px;
+}
+
+</style>
+
+<body>
+  {% block container %}
+  {% endblock %}
+</body>
+
+</html>
